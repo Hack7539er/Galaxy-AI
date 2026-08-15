@@ -1,6 +1,17 @@
 import Configs from "../config/configs.js";
 import mongoose from "mongoose";
 
+/**
+ * @name connectToMongoDB
+ * @description Establishes connection to MongoDB database using mongoose
+ * @async
+ * @returns {Promise<void>}
+ * @throws {Error} Throws error if connection fails
+ * @example
+ * // Automatically called from server.js
+ * connectToMongoDB();
+ * // Logs: "Mongo DB: Database Connected."
+ */
 const connectToMongoDB = async () => {
 
     mongoose.connection.on("connected", () => {
@@ -18,3 +29,5 @@ const connectToMongoDB = async () => {
         process.exit(1);
     }
 }
+
+export default connectToMongoDB;
