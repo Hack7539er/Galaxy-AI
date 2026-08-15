@@ -24,10 +24,9 @@ const connectToMongoDB = async () => {
     } catch (Error) {
 
         console.error(Error);
-    } finally {
-
+      
         process.exit(1);
-    }
+    } 
 }
 
 export default connectToMongoDB;
