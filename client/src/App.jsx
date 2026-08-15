@@ -4,9 +4,12 @@ import AuthenticationPage from "./pages/AuthenticationPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import BuilderPage from "./pages/BuilderPage.jsx";
 import PreviewPage from "./pages/PreviewPage.jsx";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
     return (
+        <>
+        <Toaster />
         <Routes>
             {/* Authentications Pages Routes */}
             <Route element={<GuestLayout />}>
@@ -30,6 +33,7 @@ const App = () => {
             {/* Fallback Route Catch-All  */}
             <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        </>
     );
 };
 

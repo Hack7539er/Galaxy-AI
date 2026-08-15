@@ -1,4 +1,4 @@
-export const homeTags = [
+const homeTags = [
     "Landing Page",
     "Resume Website",
     "Portfolio Website",
@@ -9,3 +9,5 @@ export const homeTags = [
     "Educational Website",
     "Business Website",
 ];
+
+export default homeTags;
